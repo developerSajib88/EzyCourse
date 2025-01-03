@@ -15,6 +15,7 @@ class PostItemView extends StatelessWidget {
         children: [
           Row(
             children: [
+
               CircleAvatar(
                 radius: 12.sp,
                 backgroundImage: const AssetImage(Assets.imagesAvater),

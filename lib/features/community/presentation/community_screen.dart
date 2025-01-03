@@ -4,6 +4,7 @@ import 'package:feature_first/common/widgets/components/item_views/post_item_vie
 import 'package:feature_first/generated/assets.dart';
 import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class CommunityScreen extends HookConsumerWidget {
@@ -101,6 +102,7 @@ class CommunityScreen extends HookConsumerWidget {
 
                       Expanded(
                         child: ListView.builder(
+                            itemCount: 5,
                             itemBuilder: (context,index){
                               return const PostItemView();
                             }
@@ -116,6 +118,31 @@ class CommunityScreen extends HookConsumerWidget {
           ),
         ),
       ),
+
+
+      bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: ColorPalates.primary,
+          selectedLabelStyle: CustomTextStyles.primary.copyWith(
+            fontWeight: FontWeight.w900
+          ),
+          unselectedLabelStyle: CustomTextStyles.primary.copyWith(
+            fontWeight: FontWeight.w900,
+            color: ColorPalates.dark
+          ),
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.groups),
+              label: "Community",
+            ),
+
+            BottomNavigationBarItem(
+              icon: Icon(Icons.logout_outlined),
+              label: "Log Out"
+            ),
+
+          ]
+      ),
+
     );
   }
 }
