@@ -1,6 +1,7 @@
 import 'package:feature_first/common/widgets/buttons/primary_buttons.dart';
 import 'package:feature_first/common/widgets/components/background_container.dart';
 import 'package:feature_first/common/widgets/components/item_views/post_item_view.dart';
+import 'package:feature_first/features/community/presentation/widgets/log_out_dialog.dart';
 import 'package:feature_first/generated/assets.dart';
 import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/material.dart';
@@ -129,6 +130,15 @@ class CommunityScreen extends HookConsumerWidget {
             fontWeight: FontWeight.w900,
             color: ColorPalates.dark
           ),
+          onTap: (index){
+            if(index == 1){
+              showGeneralDialog(
+                  context: context,
+                  pageBuilder: (context,_,__)=>
+                      const LogOutDialog()
+              );
+            }
+          },
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.groups),
