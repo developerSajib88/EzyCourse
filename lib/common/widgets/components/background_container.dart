@@ -26,19 +26,13 @@ class BackgroundContainer extends StatelessWidget {
       height: height,
       padding: padding ?? padding4,
       margin: margin ?? padding4,
+      clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
-        color: backgroundColor ?? Colors.white,
+        color: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(width: 1, color: Color(0x33004852)),
+          borderRadius: BorderRadius.circular(8),
         ),
-        shadows: const [
-          BoxShadow(
-            color: Color(0x0C000000),
-            blurRadius: 20,
-            offset: Offset(0, 0),
-            spreadRadius: 0,
-          )
-        ],
       ),
       child: child,
     );

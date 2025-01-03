@@ -3,6 +3,9 @@ class Assets {
   Assets._();
 
   static const String iconsFlutter = 'assets/icons/flutter.png';
+  static const String iconsLikeReact = 'assets/icons/like_react.png';
+  static const String iconsLoveReact = 'assets/icons/love_react.png';
+  static const String imagesAvater = 'assets/images/avater.png';
   static const String imagesFlutter = 'assets/images/flutter.png';
 
 }

@@ -3,6 +3,8 @@ import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
+  final double? width;
+  final double? height;
   final String title;
   final bool? isLoading;
   final Color? backgroundColor;
@@ -10,6 +12,8 @@ class PrimaryButton extends StatelessWidget {
   final VoidCallback onPressed;
   const PrimaryButton(
       {super.key,
+        this.width,
+        this.height,
         this.isLoading = false,
         this.backgroundColor,
         this.titleColor,
@@ -22,8 +26,8 @@ class PrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       duration: const Duration(milliseconds: 100),
       child: Container(
-        width: 1.sw,
-        height: 30.h,
+        width: width ?? 1.sw,
+        height: height ?? 30.h,
         alignment: Alignment.center,
         decoration: ShapeDecoration(
           color: backgroundColor ?? ColorPalates.primary,

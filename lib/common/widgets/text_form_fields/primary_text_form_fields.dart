@@ -57,9 +57,9 @@ class PrimaryTextFormFields extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(title, style: CustomTextStyles.primaryTextStyles),
+            Text(title, style: CustomTextStyles.primary),
             if (isRequired == true)
-              Text("*", style: CustomTextStyles.primaryTextStyles.copyWith(color: ColorPalates.primary)),
+              Text("*", style: CustomTextStyles.primary.copyWith(color: ColorPalates.primary)),
           ],
         ),
         SizedBox(
@@ -92,7 +92,7 @@ class PrimaryTextFormFields extends StatelessWidget {
               hintText: hintText,
               hintStyle: TextStyle(
                   fontSize: 7.sp,
-                  color: ColorPalates.customGrey
+                  color: ColorPalates.secondary
               ),
               enabledBorder: fieldBorder,
               focusedBorder: fieldBorder,
