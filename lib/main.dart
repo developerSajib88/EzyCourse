@@ -17,7 +17,7 @@ void main()async{
   await Hive.openBox(KeyLocalDatabase.databaseName);
 
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: ColorPalates.statusBarColor,
+      statusBarColor: ColorPalates.statusBar,
       statusBarIconBrightness: Brightness.light));
 
   runApp(

@@ -12,20 +12,20 @@ class CustomTextStyles {
 
   static TextStyle primaryTextStylesBold = GoogleFonts.dmSans(
       fontSize: 8.sp,
-      color: ColorPalates.secondaryColor,
+      color: ColorPalates.secondary,
       fontWeight: FontWeight.w600
   );
 
   static TextStyle titleTextStyles = GoogleFonts.dmSans(
       fontSize: 10.sp,
-      color: ColorPalates.secondaryColor,
+      color: ColorPalates.secondary,
       fontWeight: FontWeight.bold
   );
 
 
   static TextStyle descriptionTextStyles = GoogleFonts.dmSans(
       fontSize: 6.sp,
-      color: ColorPalates.secondaryColor,
+      color: ColorPalates.secondary,
       fontWeight : FontWeight.normal
   );
 
