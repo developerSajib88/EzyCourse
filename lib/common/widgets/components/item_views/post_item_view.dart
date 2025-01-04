@@ -1,6 +1,7 @@
 import 'package:feature_first/generated/assets.dart';
 import 'package:feature_first/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_reaction_button/flutter_reaction_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PostItemView extends StatelessWidget {
@@ -80,7 +81,7 @@ class PostItemView extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   Image.asset(
-                    Assets.iconsLikeReact,
+                    Assets.reactLike,
                     width: 15.w,
                     height: 15.w,
                   ),
@@ -88,7 +89,7 @@ class PostItemView extends StatelessWidget {
                   Positioned(
                     right: -20,
                     child: Image.asset(
-                      Assets.iconsLoveReact,
+                      Assets.reactLove,
                       width: 15.w,
                       height: 15.w,
                     ),
@@ -131,28 +132,111 @@ class PostItemView extends StatelessWidget {
             mainAxisAlignment: mainSpaceBetween,
             children: [
 
-              InkResponse(
-                onLongPress: (){},
-                child: Row(
-                  children: [
-
-                    Icon(
-                      Icons.thumb_up,
-                      color: Colors.deepPurple,
-                    ),
-
-                    gap2,
-
-                    Text(
-                      "LIKE",
-                      style: CustomTextStyles.titleTextStyles.copyWith(
-                        color: Colors.deepPurple
+              Row(
+                children: [
+                  ReactionButton<String>(
+                    onReactionChanged: (Reaction<String>? reaction) {
+                      debugPrint('Selected value: ${reaction?.value}');
+                    },
+                    reactions: <Reaction<String>>[
+                      Reaction<String>(
+                        value: "like",
+                        title: const Text("Like"),
+                        icon: Image.asset(
+                          Assets.reactLike,
+                          width: 15.w,
+                          height: 15.w,
+                        ),
                       ),
-                    )
 
-                  ],
-                ),
+                      Reaction<String>(
+                        value: "love",
+                        title: const Text("love"),
+                        icon: Image.asset(
+                          Assets.reactLove,
+                          width: 15.w,
+                          height: 15.w,
+                        ),
+                      ),
+
+                      Reaction<String>(
+                        value: "love",
+                        title: const Text("love"),
+                        icon: Image.asset(
+                          Assets.reactCare,
+                          width: 15.w,
+                          height: 15.w,
+                        ),
+                      ),
+
+                      Reaction<String>(
+                        value: "love",
+                        title: const Text("love"),
+                        icon: Image.asset(
+                          Assets.reactHaha,
+                          width: 15.w,
+                          height: 15.w,
+                        ),
+                      ),
+
+
+                      Reaction<String>(
+                        value: "love",
+                        title: const Text("love"),
+                        icon: Image.asset(
+                          Assets.reactSad,
+                          width: 15.w,
+                          height: 15.w,
+                        ),
+                      ),
+
+                      Reaction<String>(
+                        value: "love",
+                        title: const Text("love"),
+                        icon: Image.asset(
+                          Assets.reactAngry,
+                          width: 15.w,
+                          height: 15.w,
+                        ),
+                      ),
+                    ],
+                    itemSize: Size(20.w, 20.w),
+                  ),
+
+                  gap4,
+
+                  Text(
+                    "Liked",
+                    style: CustomTextStyles.titleTextStyles.copyWith(
+                      color: ColorPalates.primary
+                    ),
+                  )
+
+                ],
               ),
+
+              // InkResponse(
+              //   onLongPress: (){},
+              //   child: Row(
+              //     children: [
+              //
+              //       Icon(
+              //         Icons.thumb_up,
+              //         color: Colors.deepPurple,
+              //       ),
+              //
+              //       gap2,
+              //
+              //       Text(
+              //         "LIKE",
+              //         style: CustomTextStyles.titleTextStyles.copyWith(
+              //           color: Colors.deepPurple
+              //         ),
+              //       )
+              //
+              //     ],
+              //   ),
+              // ),
 
               InkResponse(
                 onLongPress: (){},

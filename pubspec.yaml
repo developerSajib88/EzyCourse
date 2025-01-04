@@ -70,8 +70,8 @@ dependencies:
   font_awesome_flutter: ^10.8.0
 
 
-  # OTP form fields
-  # pinput: ^5.0.0
+  # Post React
+  flutter_reaction_button: ^3.0.0+3
 
 
 
@@ -88,6 +88,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/react/
 
   uses-material-design: true
 
